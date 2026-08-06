@@ -1,99 +1,61 @@
 import { motion } from "framer-motion";
-import hero from "../assets/hero.png";
+import "./About.css";
 
 function About() {
   return (
-    <section
-      id="about"
-      style={{
-        minHeight: "100vh",
-        background: "#0F0F13",
-        color: "white",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        padding: "80px",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1100px",
-          display: "grid",
-          gridTemplateColumns: "1fr 2fr",
-          gap: "60px",
-          alignItems: "center",
-        }}
-      >
+    <section className="about-section" id="about">
+      <div className="about-container">
+
         <motion.div
+          className="about-left"
           initial={{ x: -80, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          transition={{ duration: .8 }}
         >
-          <img
-            src="src\assets\hero.png"
-            alt="About"
-            style={{
-              width: "280px",
-              borderRadius: "20px",
-              border: "4px solid #7C3AED",
-            }}
-          />
+          <span className="about-tag">ABOUT ME</span>
+
+          <h2>
+            Building modern
+            <br />
+            digital experiences.
+          </h2>
         </motion.div>
 
         <motion.div
+          className="about-right"
           initial={{ x: 80, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          transition={{ duration: .8 }}
         >
-          <h2
-            style={{
-              fontSize: "50px",
-              marginBottom: "25px",
-            }}
-          >
-            About Me
-          </h2>
+          <p>
+            I believe great software is where creativity meets engineering.
+            My focus is on building elegant user interfaces, scalable
+            full-stack applications and AI-driven solutions that solve
+            real-world problems.
 
-          <p
-            style={{
-              color: "#aaa",
-              lineHeight: "35px",
-              fontSize: "18px",
-            }}
-          >
-           I believe great software is where creativity meets engineering.
-            My focus is on building elegant user interfaces, scalable full-stack applications,
-             and building AI-driven solutions that deliver real value.
-              Every project is an opportunity to learn, innovate, and create something people genuinely enjoy using.
+            <br /><br />
 
-           
+            Every project is an opportunity to learn, innovate and build
+            something users genuinely enjoy.
           </p>
 
-          <div
-            style={{
-              display: "flex",
-              gap: "40px",
-              marginTop: "40px",
-            }}
-          >
-            <div>
-              <h1 style={{ color: "#7C3AED" }}>12+</h1>
-              <p>Projects</p>
-            </div>
-
-            {/* <div>
-              <h1 style={{ color: "#7C3AED" }}>2+</h1>
-              <p>Years Learning</p>
-            </div> */}
+          <div className="about-stats">
 
             <div>
-              <h1 style={{ color: "#7C3AED" }}>10+</h1>
-              <p>Technologies</p>
+              <h1>12+</h1>
+              <span>Projects</span>
             </div>
+
+            <div>
+              <h1>10+</h1>
+              <span>Technologies</span>
+            </div>
+
           </div>
         </motion.div>
+
       </div>
     </section>
   );

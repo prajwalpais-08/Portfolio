@@ -7,30 +7,16 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
+import "./Hero.css";
 
 function Hero() {
   return (
-    <section
-      style={{
-        minHeight: "100vh",
-        background: "#09090B",
-        color: "white",
-        display: "grid",
-        // gridTemplateColumns: "1fr 1fr",
-        alignItems: "center",
-        // padding: "0 80px",
-        maxWidth: "1300px",
-        width: "100%",
-        margin: "0 auto",
-        padding: "0 50px",
-        display: "grid",
-        gridTemplateColumns: "55% 45%",
-        alignItems: "center",
-        columnGap: "20px",
-      }}
-    >
+   <section className="hero" id="home">
+  
+    
       {/* Left Side */}
       <motion.div
+        className="hero-left"
         initial={{ x: -80, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
@@ -95,13 +81,8 @@ function Hero() {
           applications using React, Node.js and modern technologies.
         </p>
 
-        <div
-          style={{
-            marginTop: "40px",
-            display: "flex",
-            gap: "20px",
-          }}
-        >
+        <div className="hero-buttons">
+        
           <button
             style={{
               padding: "15px 35px",
@@ -209,24 +190,17 @@ function Hero() {
 
       {/* Right Side */}
       <motion.div
+        className="hero-right"
         initial={{ x: 80, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
+        
       >
         <img
           src={hero}
           alt="Hero"
-          style={{
-            width: "420px",
-            borderRadius: "50%",
-            border: "5px solid #7C3AED",
-            boxShadow: "0 0 50px #7C3AED",
-          }}
-        />
+          className="hero-image"
+      />
       </motion.div>
       
     </section>
